@@ -9,10 +9,10 @@ tools:context=".AllItemsActivity">
 
 
     <Button
-        android:id="@+id/button_add"
+        android:id="@+id/button_addNewItem"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:text="add/remove items"
+        android:text="ADD NEW ITEM"
         android:textSize="20sp" />
 
     <android.support.v7.widget.RecyclerView
