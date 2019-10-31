@@ -13,7 +13,9 @@
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:text="Item name"
-        android:textSize="30sp" />
+        android:textStyle="normal"
+        android:textSize="30sp"
+        android:textColor="@color/colorHeadlineText"/>
 
     <EditText
         android:id="@+id/editText_name"
@@ -33,7 +35,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text="Choose amount"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@color/colorHeadlineText"/>
 
     <TextView
         android:id="@+id/textView_amount"
