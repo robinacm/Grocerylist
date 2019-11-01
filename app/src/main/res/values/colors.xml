@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorHeadlineText">#293133</color>
+    <color name="colorRemoveButtons">#ff5c5c</color>
+    <color name="colorAddNewItemButtons">#123abc</color>
+    <color name="colorWhiteText">#ffffff</color>
 </resources>

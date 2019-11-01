@@ -7,20 +7,31 @@ android:layout_height="match_parent"
 android:padding="20dp"
 tools:context=".AllItemsActivity">
 
-
     <Button
         android:id="@+id/button_addNewItem"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="60dp"
+        android:background="@color/colorAddNewItemButtons"
         android:text="ADD NEW ITEM"
-        android:textSize="20sp" />
+        android:textColor="@color/colorWhiteText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_clearAllItems"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_alignRight="@id/recyclerView"
+        android:background="@color/colorRemoveButtons"
+        android:text="CLEAR ALL ITEMS"
+        android:textColor="@color/colorWhiteText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <android.support.v7.widget.RecyclerView
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@id/button_add"/>
-
-
+    android:layout_below="@id/button_addNewItem"/>
 
 </RelativeLayout>
