@@ -1,5 +1,6 @@
 package com.example.grocerylist;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,16 +27,33 @@ public class ChooseListActivity extends AppCompatActivity {
         btnChooseList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getAllItems();
+                getRowInDB();
             }
         });
     }
 
     private void getAllItems() {
-        database.query(
-                GroceryContract.GroceryEntry.TABLE_NAME,
-                null,null,null,null,null /* Behöver inte dessa för queryn*/,
-                GroceryContract.GroceryEntry.COLUMN_TIMESTAMP + " DESC"
-        );
+        Cursor c = database.rawQuery("SELECT * FROM groceryList", null);
+
+        StringBuffer buffer = new StringBuffer();
+        while(c.moveToNext()){
+            buffer.append(c.getString(1) + " ");
+            buffer.append(c.getString(2) + " ");
+            buffer.append(c.getString(3) + "\n");
+        }
+
+        System.out.println("Printing out data: " + buffer.toString());
+    }
+
+    private void getRowInDB() {
+        Cursor c = database.rawQuery("SELECT name,_id FROM groceryList WHERE _id=20", null);
+
+        StringBuffer buffer = new StringBuffer();
+        while(c.moveToNext()){
+            buffer.append(c.getString(0) + " ");
+            buffer.append(c.getString(1) + "\n");
+        }
+
+        System.out.println("Printing out data: " + buffer.toString());
     }
 }
